@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "ea825c63-0776-4436-adbd-a93c68826c2c",
+		"name": "PC2| Comidas_Rápidas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "42467660"
+	},
+	"item": [
+		{
+			"name": "Restaurante",
+			"item": [
+				{
+					"name": "Publicar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_rest\": \"102\",\r\n  \"nombre\": \"Don Facundo\",\r\n  \"ciudad\": \"Zipaquirá\",\r\n  \"direccion\": \"Cra 5 No 3 17\",\r\n  \"fecha_apertura\": \"1999-04-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/restaurantes"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/restaurantes"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Don Facunderstshing\",\r\n  \"ciudad\": \"Zipaquirá\",\r\n  \"direccion\": \"Cra 5 No 3 21\",\r\n  \"fecha_apertura\": \"2001-05-27\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/restaurantes/102"
+					},
+					"response": []
+				},
+				{
+					"name": "Elminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3020/api/restaurantes/102"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empleado",
+			"item": [
+				{
+					"name": "Publicar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_empleado\": 103,\r\n  \"nombre\" : \"Felipe\",\r\n  \"rol\" : \"Cocinero\",\r\n  \"id_rest\": 101\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/empleados"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3020/api/empleados"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\" : \"Ivana\",\r\n  \"rol\" : \"Cajera\",\r\n  \"id_rest\": 101\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/empleados/102"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3020/api/empleados/102"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "Publicar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_prod\": 103,\r\n  \"nombre\" : \"Whiscoffee\",\r\n  \"precio\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/productos"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3020/api/productos"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\" : \"Whiscoffee\",\r\n  \"precio\": 6.7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/productos/103"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3020/api/productos/102"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Publicar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_pedido\": 102,\r\n  \"fecha\" : \"2025-04-25\",\r\n  \"id_rest\": 101,\r\n  \"total\": 38\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/pedidos"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3020/api/pedidos"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\" : \"2025-04-25\",\r\n  \"id_rest\": 1,\r\n  \"total\": 37.4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/pedidos/102"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3020/api/pedidos/102"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetallePedido",
+			"item": [
+				{
+					"name": "Publicar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_detalle\": 299,\r\n    \"id_pedido\": 101,\r\n    \"id_prod\": 2,\r\n    \"cantidad\": 3,\r\n    \"subtotal\": 66.93\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/detalles"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3020/api/detalles"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_prod\": 2,\r\n    \"cantidad\": 2,\r\n    \"subtotal\": 44.62\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3020/api/detalles/299"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3020/api/detalles/299"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos Del Pedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3020/api/consultaN1/101/resultado"
+			},
+			"response": []
+		},
+		{
+			"name": "Productos Más Vendidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3020/api/ranking/37"
+			},
+			"response": []
+		},
+		{
+			"name": "Total Ventas Por Restaurante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3020/api/Recaudo_Restaurantes"
+			},
+			"response": []
+		},
+		{
+			"name": "Pedidos Según Fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3020/api/peticion/2025-04-25"
+			},
+			"response": []
+		},
+		{
+			"name": "Rol Empleado Por Restaurante",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3020/api/cargo/101/Cocinero"
+			},
+			"response": []
+		}
+	]
+}
